@@ -1,9 +1,10 @@
 $(document).ready(function(){
     $("#perguntar").click(function(){
+
         var pergunta = $("#pergunta").val();
         console.log(pergunta);
         $.ajax({
-            url: 'conectChat.php',
+            url: 'conectAPI.php',
             method: 'post',
             dataType: 'json',
             data: {
@@ -20,7 +21,7 @@ $(document).ready(function(){
                     }
             },
             error: function(xhr, status, error){
-                console.log(xhr, responseText);
+                console.log(xhr.responseText);
             }
         })
     })

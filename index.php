@@ -12,7 +12,7 @@
     <div id = "chat">
         <div id="chat-area"></div>
         <p id="resposta"></p><br>
-        <input type="text" id="pergunta" placeholder="Digite sua pergunta...">
+        <input type="text" id="perguntas" placeholder="Digite sua pergunta...">
         <button id="perguntar">Enviar</button>
     </div>
     
