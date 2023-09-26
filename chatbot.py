@@ -6,15 +6,15 @@ perguntas_respostas = {
     1: "Olá! como posso ajudar?",
     2: "Estou bem, obrigada por perguntar",
     3: "Meu nome é Jontex",
-    4: "Posso redponder a perguntas simples.",
+    4: "Posso responder a perguntas simples.",
     5: "Tchau! tenha um bom dia!",
 }
 
 cumprimento = ["ola", "oi", "ai"]
 duvidas = ["esta bem","tudo certo"]
-whois = ["seu nome"]
-oqFaz = ["oq faz"]
-vlw = ["valeu irmao"]
+whois = ["seu nome","voce é"]
+oqFaz = ["oque faz","suas funções"]
+vlw = ["valeu irmao","até logo","até mais"]
 
 def responder_perguntas(pergunta):
 
@@ -70,5 +70,4 @@ def chatbot():
 
 if __name__ == "__main__":
     chatbot()
-    responder_perguntas()
    
