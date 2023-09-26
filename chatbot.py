@@ -1,5 +1,8 @@
+from flask import Flask, request, jsonify
+import random
 from nltk.tokenize import word_tokenize
 import nltk
+
 nltk.download('punkt')
 
 perguntas_respostas = {
@@ -16,9 +19,19 @@ whois = ["seu nome","voce é"]
 oqFaz = ["oque faz","suas funções"]
 vlw = ["valeu irmao","até logo","até mais"]
 
+app = Flask(__name__)
+
+@app.route('/chatbot', methods=['POST'])
+def chatbot():
+    data = request.json
+    user_question = data['question']
+    resposta = responder_perguntas(user_question)
+    return jsonify({'response': resposta})
+
 def responder_perguntas(pergunta):
 
     tokens = word_tokenize(pergunta.lower())
+
     if(len(tokens) > 1):
         expectativa = (tokens[0] +" "+ tokens[1])
         if expectativa in cumprimento:
@@ -57,17 +70,18 @@ def responder_perguntas(pergunta):
                 return "Desculpe, não entendi a pergunta."
             break
 
-def chatbot():
-    print("Olá! sou Jontex, como posso ajudar? digite tchau para finalizar a nossa conversa.")
-    while True:
-        perguntas = input("Você: ")
-        if perguntas.lower() == 'tchau':
-            print("chatbot: tchau! até a proxima.")
-            break
-        resposta = responder_perguntas(perguntas)
-        print("chatbot: ", resposta)
+# def chatbot():
+#     print("Olá! sou Jontex, como posso ajudar? digite tchau para finalizar a nossa conversa.")
+#     while True:
+#         perguntas = input("Você: ")
+#         if perguntas.lower() == 'tchau':
+#             print("chatbot: tchau! até a proxima.")
+#             break
+#         resposta = responder_perguntas(perguntas)
+#         print("chatbot: ", resposta)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    app.run(debug=True, host='localhost', port=5000)
     chatbot()
    
