@@ -1,7 +1,7 @@
 <?php
 $api_url = 'http://localhost:5000/chatbot';
 
-$pergunta = $_POST['perguntas'];
+$pergunta = $_POST['pergunta'];
 
 $data = json_encode(['question' => $pergunta]);
 
@@ -17,7 +17,7 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, [
 $response = curl_exec($ch);
 curl_close($ch);
 
-$resultado = json_decode($response,true);
+$resultado = json_decode($response, true);
 $chatbot_resposta = $resultado['response'];
 
 echo json_encode($chatbot_resposta);

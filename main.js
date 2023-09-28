@@ -1,5 +1,5 @@
-$(document).ready(function(){
-    $("#perguntar").click(function(){
+$(document).ready(function (){
+    $("#perguntar").click(function (){
 
         var pergunta = $("#pergunta").val();
         console.log(pergunta);
@@ -11,7 +11,6 @@ $(document).ready(function(){
                 pergunta:pergunta
             },
             success: function(data) {
-                console.log(data);
                     console.log(data);
                     if(data.status != "error"){
                         var response = document.getElementById('resposta');

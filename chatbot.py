@@ -7,7 +7,7 @@ nltk.download('punkt')
 
 perguntas_respostas = {
     1: "Olá! como posso ajudar?",
-    2: "Estou bem, obrigada por perguntar",
+    2: "Estou bem, obrigado por perguntar",
     3: "Meu nome é Jontex",
     4: "Posso responder a perguntas simples.",
     5: "Tchau! tenha um bom dia!",
@@ -69,16 +69,6 @@ def responder_perguntas(pergunta):
             else:
                 return "Desculpe, não entendi a pergunta."
             break
-
-# def chatbot():
-#     print("Olá! sou Jontex, como posso ajudar? digite tchau para finalizar a nossa conversa.")
-#     while True:
-#         perguntas = input("Você: ")
-#         if perguntas.lower() == 'tchau':
-#             print("chatbot: tchau! até a proxima.")
-#             break
-#         resposta = responder_perguntas(perguntas)
-#         print("chatbot: ", resposta)
 
 
 if __name__ == '__main__':
