@@ -6,16 +6,16 @@ import nltk
 nltk.download('punkt')
 
 perguntas_respostas = {
-    1: "Olá! como posso ajudar?",
-    2: "Estou bem, obrigado por perguntar",
+    1: "Bem-Vindo, como posso ajudar?",
+    2: "temos sim, gostaria de ver os valores?",
     3: "Meu nome é Jontex",
     4: "Posso responder a perguntas simples.",
     5: "Tchau! tenha um bom dia!",
 }
 
 cumprimento = ["ola", "oi", "ai"]
-duvidas = ["esta bem","tudo certo"]
-whois = ["seu nome","voce é"]
+duvidas = ["tem liquidificador","tem sofá"]
+whois = ["sim","não"]
 oqFaz = ["oque faz","suas funções"]
 vlw = ["valeu irmao","até logo","até mais"]
 
