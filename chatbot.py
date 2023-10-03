@@ -6,18 +6,18 @@ import nltk
 nltk.download('punkt')
 
 perguntas_respostas = {
-    1: "Bem-Vindo, como posso ajudar?",
-    2: "temos sim, gostaria de ver os valores?",
-    3: "Meu nome é Jontex",
-    4: "Posso responder a perguntas simples.",
+    1: "Bem-Vindo ao Salão dos Deuses, como posso ajudar?",
+    2: "temos esses horarios disponiveis no dia de hoje: dez horas, onze horas,doze horas, cinco horas ,seis horas",
+    3: "Pronto! Serviço marcado com sucesso! No que mais posso ajudar?",
+    4: "corte de cabelo: R$20,00 / barba: R$15,00/ sobrancelha: R$10,00",
     5: "Tchau! tenha um bom dia!",
 }
 
-cumprimento = ["ola", "oi", "ai"]
-duvidas = ["tem liquidificador","tem sofá"]
-whois = ["sim","não"]
-oqFaz = ["oque faz","suas funções"]
-vlw = ["valeu irmao","até logo","até mais"]
+cumprimento = ["ola", "oi", "e ai", "iai", "hello", "hay", "hey"]
+duvidas = ["cortar cabelo","aparar barba","sobrancelha"]
+whois = ["dez horas", "onze horas","doze horas", "cinco horas" ,"seis horas"]
+oqFaz = ["quanto custa", "valor", "preco"]
+vlw = ["até logo","até mais", "muito obrigado", "vlw", "valeu", "obr"]
 
 app = Flask(__name__)
 
